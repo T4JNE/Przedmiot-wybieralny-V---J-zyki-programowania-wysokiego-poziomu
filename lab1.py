@@ -55,12 +55,13 @@ else:
 
 #(8)
 print("Zad 8")
-a = int(input("Podaj rok "))
-
-if(a%4==0 or (a%100==0 and a%400==0)):
-    print("Przestepny")
+r=int(input("Podaj rok: "))
+if ((r%100 == 0) and (r%400 != 0)):
+    print("Rok nie przestepny")
+elif (r%4==0):
+    print(" Rok Przestepny")
 else:
-    print("Nie przestepny")
+    print ("Rok nie przestępny")
 
 #(9)
 print("Zad 9")
