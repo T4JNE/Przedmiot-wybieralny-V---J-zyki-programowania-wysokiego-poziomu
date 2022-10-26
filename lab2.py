@@ -1,7 +1,7 @@
 #(1)
 print("Zad 1")
 for i in range(5):
-    print(i,end=" ")
+    print(str(i)+" \n")
 print()
 
 for i in range(4,8):
