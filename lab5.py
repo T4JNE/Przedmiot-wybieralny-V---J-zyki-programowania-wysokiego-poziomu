@@ -1,6 +1,6 @@
 # (1) ==========================
 import math
-'''
+
 print("Zad 1")
 l = [3, 'alfa', 2.71, 'kot']
 
@@ -65,7 +65,7 @@ for i in range(1, n + 1):
 
 print("maksymalna wartosc: ", max(l))
 print("minimalna wartosc: ", min(l))
-'''
+
 # (5) ==========================
 print("Zad 5")
 l = []
@@ -113,8 +113,9 @@ print("l6: ", l6)
 print("Zad 7")
 
 l = []
-pi = str(math.pi)
-for i in range(2,17):
+pi = str(format(math.pi, '.50f'))
+
+for i in range(2,52):
     l += [pi[i]]
 
 print(l)
