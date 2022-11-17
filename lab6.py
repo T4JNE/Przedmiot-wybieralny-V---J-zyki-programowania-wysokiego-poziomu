@@ -1,4 +1,3 @@
-'''
 # (1) ==========================
 print("Zad 1")
 
@@ -27,11 +26,11 @@ print("Zad 3")
 num = 321
 arr = list(str(num))
 print(arr)
-'''
+
 from math import factorial
 
 print(factorial(6))
-'''
+
 n = factorial(1000)
 arr = list(str(n))
 print(arr)
@@ -59,17 +58,13 @@ for i in arr:
     arr2 += [i % 19]
 
 n = int(input())
-x = 0
 print(arr2)
 
 if(n in arr2):
-    for i in arr2:
-        if i == n:
-            x += 1
-    print("podana liczba wystepuje", x, "razy")
+    print("podana liczba wystepuje", arr2.count(n), "razy")
 else:
     print("podana liczba nie wystepuje")
-'''
+
 # (6) ==========================
 print("Zad 6")
 
@@ -92,18 +87,9 @@ print("suma cyfr 1000!: ", sum(arr))
 # (7) ==========================
 print("Zad 7")
 
-'''
-Nie rozumiem polecenia
+n = str(factorial(1000))
 
-def occurs_times(l, number):
-    output = 0
-    if (number in l):
-        for i in l:
-            if i == n:
-                output += 1
-
-    return output
-
-for i in range(10,100):
-    print(i, "wystepuje", occurs_times(arr, i), "razy")
-'''
+for i in range(10):
+    for j in range(10):
+        s = str(i) + str(j)
+        print("para", s, "wystepuje:", n.count(s), "razy")
