@@ -1,3 +1,5 @@
+from math import factorial
+
 # (1) ==========================
 print("Zad 1")
 
@@ -27,8 +29,6 @@ num = 321
 arr = list(str(num))
 print(arr)
 
-from math import factorial
-
 print(factorial(6))
 
 n = factorial(1000)
@@ -43,7 +43,7 @@ print("Zad 4")
 
 arr = []
 for i in range(31):
-    arr.append(3**i - 2**i)
+    arr.append(3 ** i - 2 ** i)
 print(arr)
 
 i = arr.index(1161737179)
@@ -60,7 +60,7 @@ for i in arr:
 n = int(input())
 print(arr2)
 
-if(n in arr2):
+if n in arr2:
     print("podana liczba wystepuje", arr2.count(n), "razy")
 else:
     print("podana liczba nie wystepuje")
