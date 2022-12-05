@@ -108,3 +108,52 @@ fo.close()
 
 # ==========================
 print("Zad 6")
+
+fo = open('plik6.txt', 'w')
+
+Point1_x = random.randint(1, 50)
+Point1_y = random.randint(1, 50)
+
+Point2_x = random.randint(1, 50)
+Point2_y = random.randint(1, 50)
+
+#print(Point1_x, Point1_y)
+#print(Point2_x, Point2_y)
+
+for y in range(1, 51):
+    for x in range(1, 51):
+        line_equation = (Point2_x - Point1_x)*(y - Point1_y) - (Point2_y - Point1_y)*(x - Point1_x)
+
+        #Odcinki start i koniec
+        if (x == Point1_x and y == Point1_y) or (x == Point2_x and y == Point2_y):
+            fo.write("*")
+            #wyliczenie lini ze wzoru +-10    (Granice)
+        elif abs(line_equation) <= 10 and (x > min(Point1_x, Point2_x) and x < max(Point1_x, Point2_x)):
+            fo.write("*")
+        else:
+            fo.write(" ")
+    fo.write("\n")
+
+fo.close()
+
+# ==========================
+print("Zad 7")
+
+fo = open('plik7.txt', 'w')
+
+Point1_x = random.randint(2, 49)
+Point1_y = random.randint(2, 49)
+Radius = random.randint(1, max(min(50 - Point1_x, Point1_x, 50 - Point1_y, Point1_y), 1))
+
+#print(Point1_x, Point1_y)
+#print(Radius)
+
+for y in range(1, 51):
+    for x in range(1, 51):
+        if abs((Point1_y-y)*(Point1_y-y)+(Point1_x-x)*(Point1_x-x) - (Radius * Radius)) <= Radius:
+            fo.write("*")
+        else:
+            fo.write(" ")
+    fo.write("\n")
+
+fo.close()
