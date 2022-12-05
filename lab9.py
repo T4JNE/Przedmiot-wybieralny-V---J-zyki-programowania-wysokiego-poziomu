@@ -56,6 +56,7 @@ for num in range (2, 101):
     isprime = False
     for i in range(2, num):
         if num % i == 0:
+            isprime = False
             break
         else:
             isprime = True
@@ -64,3 +65,46 @@ for num in range (2, 101):
         fo.write(str(num) + " ")
 
 fo.close()
+
+# ==========================
+print("Zad 5")
+
+fo = open('pierwsze.txt', 'r')
+
+numbers = []
+while True:
+    ch = fo.read(1)
+
+    if ch == "":
+        break
+    elif ch != " ":
+        s += ch
+    else:
+        numbers += [int(s)]
+        s = ""
+
+last_prime = numbers[len(numbers)-1]
+print(last_prime)
+
+fo.close()
+
+# ==
+
+fo = open('pierwsze.txt', 'a')
+
+for num in range (last_prime + 1, last_prime + 102):
+    isprime = False
+    for i in range(2, num):
+        if num % i == 0:
+            isprime = False
+            break
+        else:
+            isprime = True
+
+    if isprime:
+        fo.write(str(num) + " ")
+
+fo.close()
+
+# ==========================
+print("Zad 6")
