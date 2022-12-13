@@ -53,7 +53,7 @@ else:
 
 print()
 
-#d = {"Imię": "Anna", "Wiek": 32, 5: "Costam", (6, 2): 32}
+d = {"Imię": "Anna", "Wiek": 32, 5: "Costam", (6, 2): 32}
 print(d)
 if bezpowt(d):
     print("Nie ma powtorzen")
